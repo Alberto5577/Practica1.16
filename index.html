@@ -5,21 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Formulario</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <header>
         <h1>Formulario</h1>
     </header>
     <main>
-        <table border="2">
+        <table class="org" border="1">
         <form action="formulario.php" method="get">
             <tbody>
                 <tr>
                     <td>
                     <p>Tratamiento: * 
                         <br>
-                        <input type="radio" name="sexo" value="h" required>Sr.
-                        <input type="radio" name="sexo" value="m" required>Sra.
+                        <input type="radio" name="sexo" value="h"  required>Sr.
+                        <input type="radio" name="sexo" value="m"  required>Sra.
                     </p>
                     </td>
                     <td>
@@ -45,7 +46,10 @@
                 <td>
                 <p>Tipo Doc: *
                     <br>
-                    <input type="text" name="TipoDoc"size="20" placeholder="D.N.I" required>
+                    <select name="menu">
+                        <option name="size">DNI</option>
+                        <option>NIA</option>
+                    </select>
                 </p>
                 </td>
                 <td>
@@ -63,15 +67,227 @@
                 </tr>
                 <tr>
                 <td>
-                <p>País de nacimiento: *
+                <p>País nacimiento: *
                     <br>
-                    <input type=""
+                    <select name="menu" required>
+                        <option>ESPAÑA</option>
+                        <option>FRANCIA</option>
+                        <option>ANDORRA</option>
+                        <option>ALEMANIA</option>
+                        <option>PAISES BAJOS</option>
+                    </select>
+                </p>
+                </td>
+                <td>
+                <p>Nacionalidad: *
+                    <br>
+                <select name="menu" required>
+                    <option>ESPAÑA</option>
+                    <option>BÉLGICA</option>
+                    <option>ALEMANIA</option>
+                    <option>RUMANIA</option>
+                    <option>CROACIA</option>
+                </select>
+                </p>
+                </td>
+                <td>
+                <p>Segunda Nacionalidad:
+                    <br>
+                    <select name="menu">
+                            <option>Ninguna</option>
+                            <option>ESPAÑA</option>
+                            <option>FRANCIA</option>
+                            <option>RUMANIA</option>
+                            <option>ALEMANIA</option>
+                    </select>
+
+                </p>
+                </td>
+                <td>
+                <p>País residencia fiscal: *
+                    <br>
+                    <select name="menu">
+                            <option>ESPAÑA</option>
+                            <option>FRANCIA</option>
+                            <option>ALEMANIA</option>
+                            <option>RUMANIA</option>
+                            <option>CROACIA</option>
+                    </select>
+                </p>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <p>Trabajo: *
+                    <br>
+                    <select name="menu">
+                            <option>Si</option>
+                            <option>No</option>
+                    </select>
+                </p>
+                </td>
+                <td>
+                <p>Tipo de Actividad* 
+                    <br>
+                    <select name="menu" required>
+                            <option>Tareas Hogar</option>
+                            <option>Estudiante</option>
+                            <option>Desempleado</option>
+                            <option>Jubilado</option>
+                            <option>Pensionista</option>
+                    </select>
+                </p>
+                </td>
+                <td>
+                <p>Sector Profesional* 
+                    <br>
+                    <select name="menu" required>
+                        <option value="1">No trabaja</option>
+                        <option value="2">Banca</option>
+                        <option value="3">Construcción</option>
+                        <option value="4">Energía</option>
+                        <option value="5">Industria</option>
+                        <option value="6">Recursos humanos</option>
+                        <option value="7">Servicios</option>
+                    </select>
+                </p>
+                </td>
+                <td>
+                <p>Empresa: *
+                    <br>
+                    <input type="text" name="Empresa" size="20" required>
+                </p>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <p>Propósito de la cuenta: *
+                    <br>
+                    <select name="menu" required>
+                        <option value="1">Ahorro</option>
+                        <option value="2">Gasto</option>
+                        <option value="3">Herencia</option>
+                    </select>
+                </p>
+                </td>
+                <td>
+                <p>Origen de sus ahorros: *
+                    <br>
+                    <select name="menu" required>
+                        <option value="1">Nómina o pensión</option>
+                        <option value="2">Herencia</option>
+                    </select>
+                </p>
+                </td>
+                </tr>
+            </tbody>
+            <tr>
+            <td>
+        </form>
+        </table>
+        <br>
+        <table class="org" border="1">
+        <form action="formulario.php" method="get">
+            <tbody>
+                <tr>
+                <td>
+                <p>Tipo de vía*
+                    <br>
+                    <select name="menu" aria-setsize="20" required>
+                        <option value="1">CALLE</option>
+                        <option value="2">AVENIDA</option>
+                        <option value="3">CRUCE</option>
+                    </select>
+                </p>
+                </td>
+                <td>
+                <p>Dirección*
+                    <br>
+                    <input type="text" name="Dirección" size="37" required>
+                </p>
+                </td>
+                <td>
+                <p>Número*
+                    <br>
+                    <input type="text" name="Número" size="10" required>
+                </p>
+                </td>
+                <td>
+                <p>Piso
+                    <br>
+                    <input type="text" name="Piso" size="10">
+                </p>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <p>Urb./Pol./Otros 
+                    <br>
+                    <input type="text" name="Urb" size="20">
+                </p>
+                </td>
+                <td>
+                <p>Localidad* 
+                    <br>
+                    <input type="text" name="Localidad" size="20" required>
+                </p>
+                </td>
+                <td>
+                <p>Provincia
+                    <select name="menu" required>
+                        <option value="1"></option>
+                        <option value="2">Valencia</option>
+                        <option value="3">Barcelona</option>
+                        <option value="4">Madrid</option>
+                    </select>
+                </p>
+                </td>
+                <td>
+                <p>Código Postal* 
+                    <br>
+                    <input type="text" name="CodPostal" required>
+                </p>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                <p>Teléfono móvil: *
+                    <br>
+                    <input type="text" name="Tel" required>
+                </p>
+                </td>
+                <td>
+                <p>Teléfono particular: *
+                    <br>
+                    <input type="text" name="TelPart" >
+                </p>
+                </td>
+                <td colspan="2">
+                <p>Dirección de e-mail: *
+                    <input type="email" name="email" required>
                 </p>
                 </td>
                 </tr>
             </tbody>
         </form>
+        <hr>
+        <td colspan="4">
+        <p>Para ofrecerle un mejor servicio nose sería útil conocer si posee otra entidad:
+            <br>
+            <input type="checkbox" name="casilla">Plan de pensiones
+            <input type="checkbox" name="casilla">Fondos
+            <input type="checkbox" name="casilla">Acciones
+            <input type="checkbox" name="casilla">Hipoteca
+            <input type="checkbox" name="casilla">Préstamo
+            <input type="checkbox" name="casilla">Seguro de vida
+        </p>
+        </td>
         </table>
+        <hr>
+        <footer>
+            Puede consultar en nuestrs Web o solicitarnos toda la <u>Información Precontractual</u> de nuestros productos. Al pulsar "Continuar" está
+            aceptando la <u>Cláusula de Protección de datos</u>
+        </footer>
     </main>
 
 </body>
